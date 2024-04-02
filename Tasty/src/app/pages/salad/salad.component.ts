@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { SearchComponent } from '../search/search.component';
 
 @Component({
   selector: 'app-salad',
   standalone: true,
-  imports: [],
+  imports: [SearchComponent],
   templateUrl: './salad.component.html',
   styleUrl: './salad.component.css'
 })
