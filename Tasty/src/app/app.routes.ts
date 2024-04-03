@@ -8,9 +8,11 @@ import { SearchComponent } from './pages/search/search.component';
 import { RecipeComponent } from './pages/recipe/recipe.component';
 
 export const routes: Routes = [
-    { path: 'salad', component: SaladComponent },
+    { path: '', component: SoupComponent },
 
     { path: 'soup', component: SoupComponent },
+    
+    { path: 'salad', component: SaladComponent },
 
     { path: 'sweets', component: SweetsComponent },
 
@@ -21,4 +23,5 @@ export const routes: Routes = [
     { path: 'search', component: SearchComponent },
 
     { path: 'recipe/:id', component: RecipeComponent },
+
 ];

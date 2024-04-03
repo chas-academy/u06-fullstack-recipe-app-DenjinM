@@ -11,7 +11,7 @@ import { SearchComponent } from '../search/search.component';
   styleUrl: './sweets.component.css'
 })
 export class SweetsComponent {
-  dishType = "Desserts";
+  dishType = "Biscuits and cookies";
   recipes: any[] =[] ;
   constructor(private recipeService: RecipeService, private router: Router) { }
   recieveRecipes(recipes: any[]) {

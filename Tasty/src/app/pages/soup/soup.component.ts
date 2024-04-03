@@ -11,7 +11,7 @@ import { SearchComponent } from '../search/search.component';
   styleUrl: './soup.component.css'
 })
 export class SoupComponent {
-  dishType = "Main course";
+  dishType = "Soup";
   recipes?: any;
   constructor(private recipeService: RecipeService, private router: Router) { }
   recieveRecipes(recipes: any[]) {

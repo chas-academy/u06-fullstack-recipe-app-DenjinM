@@ -4,7 +4,6 @@ import { NavbarComponent } from './pages/navbar/navbar.component';
 import { SearchComponent } from './pages/search/search.component';
 import { LoginComponent } from './pages/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
 import { RegisterComponent } from './pages/register/register.component';
 
 @Component({

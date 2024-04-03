@@ -18,44 +18,25 @@ export class RecipeService {
   getRecipes(
     searchterm: string,
     dishType: string,
-    vegan: string = '',
-    dairy: string = '',
-    gluten: string = ''
+    soyfree: string = '',
+    fishfree: string = '',
+    redmeatfree: string = ''
   ): Observable<any> {
-    let url =
-      this.baseUrl +
-      '?type=public' +
-      '&q=' +
-      searchterm +
-      '&app_id=' +
-      this.app_id +
-      '&app_key=' +
-      this.app_key +
-      '&dishType=' +
-      dishType +
-      '&random=true'
-    if (vegan) {
-      url += '&health=vegan';
+    let url = this.baseUrl + '?type=public' + '&q=' + searchterm + '&app_id=' + this.app_id + '&app_key=' + this.app_key + '&dishType=' + dishType + '&random=true'
+    if (soyfree) {
+      url += '&health=soy-free';
     }
-    if (dairy) {
-      url += '&health=dairy-free';
+    if (fishfree) {
+      url += '&health=fish-free';
     }
-    if (gluten) {
-      url += '&health=gluten-free';
+    if (redmeatfree) {
+      url += '&health=red-meat-free';
     }
     console.log(url);
     return this.http.get<any>(url, this.httpOptions);
   }
   getRecipeById(id: string) {
-    let url =
-      this.baseUrl +
-      '/' +
-      id +
-      '?type=public' +
-      '&app_id=' +
-      this.app_id +
-      '&app_key=' +
-      this.app_key;
+    let url = this.baseUrl + '/' + id + '?type=public' + '&app_id=' + this.app_id + '&app_key=' + this.app_key;
     return this.http.get<any>(url, this.httpOptions);
   }
 }
