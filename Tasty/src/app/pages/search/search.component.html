@@ -1,4 +1,4 @@
-<div class="pt-2 relative mx-auto text-gray-600">
+<!-- <div class="pt-2 relative mx-auto text-gray-600">
     <input class="border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
       type="search" name="search" placeholder="Search">
     <button type="submit" class="absolute right-0 top-0 mt-5 mr-4">
@@ -11,4 +11,24 @@
       </svg>
     </button>
   </div>
+ -->
 
+ <div class="search-wrap">
+  <div class="">
+    <input [(ngModel)]="querySearch" type="search" id="default-search" />
+    <button type="submit" [disabled]="!querySearch" (click)="onSearch()">
+      Search
+    </button>
+  </div>
+  <div class="toogle-wrap">
+    <mat-slide-toggle [(ngModel)]="vegan" (change)="onSearch()" class="toggle"
+      >Vegan</mat-slide-toggle
+    >
+    <mat-slide-toggle [(ngModel)]="dairy" (change)="onSearch()" class="toggle"
+      >Dairy-free</mat-slide-toggle
+    >
+    <mat-slide-toggle [(ngModel)]="gluten" (change)="onSearch()" class="toggle"
+      >Gluten-free</mat-slide-toggle
+    >
+  </div>
+</div>

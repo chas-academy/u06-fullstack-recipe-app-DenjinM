@@ -1,1 +1,20 @@
-<p>sweets works!</p>
+<app-search
+  [dishType]="dishType"
+  (recipesEmitter)="recieveRecipes($event)"
+></app-search>
+<div class="">
+  @for (recipe of recipes; track recipe) {
+  <article (click)="goToDetails(recipe)" class="dessert">
+    <img src="{{ recipe.image }}" class="" />
+    <h3 class="">{{ recipe.label }}</h3>
+    <p class="">{{ recipe.self }}</p>
+    <ul class="">
+      @for (ingredientLine of recipe.ingredientLines; track ingredientLine) {
+      <li>{{ ingredientLine }}</li>
+      }
+    </ul>
+  </article>
+  } @empty {
+  <p>There are no recipes...</p>
+  }
+</div>
