@@ -4,14 +4,14 @@ import { RecipeService } from '../../services/recipe.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-salad',
+  selector: 'app-starter',
   standalone: true,
   imports: [SearchComponent],
-  templateUrl: './salad.component.html',
-  styleUrl: './salad.component.css'
+  templateUrl: './starter.component.html',
+  styleUrl: './starter.component.css'
 })
-export class SaladComponent {
-  dishType = "Salad";
+export class StarterComponent {
+  dishType = "Starter";
   recipes?: any;
   constructor(private recipeService: RecipeService, private router: Router) { }
   recieveRecipes(recipes: any[]) {

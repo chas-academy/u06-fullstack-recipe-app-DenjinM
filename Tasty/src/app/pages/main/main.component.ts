@@ -4,15 +4,15 @@ import { Router } from '@angular/router';
 import { SearchComponent } from '../search/search.component';
 
 @Component({
-  selector: 'app-sweets',
+  selector: 'app-main',
   standalone: true,
   imports: [SearchComponent],
-  templateUrl: './sweets.component.html',
-  styleUrl: './sweets.component.css'
+  templateUrl: './main.component.html',
+  styleUrl: './main.component.css'
 })
-export class SweetsComponent {
-  dishType = "Biscuits and cookies";
-  recipes: any[] =[] ;
+export class MainComponent {
+  dishType = "Main course";
+  recipes?: any;
   constructor(private recipeService: RecipeService, private router: Router) { }
   recieveRecipes(recipes: any[]) {
     this.recipes = recipes
@@ -25,3 +25,4 @@ export class SweetsComponent {
     this.router.navigate(['/recipe', extractedId]);
   }
 }
+

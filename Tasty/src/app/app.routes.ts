@@ -1,20 +1,20 @@
 import { Routes } from '@angular/router';
-import { SaladComponent } from './pages/salad/salad.component';
-import { SoupComponent } from './pages/soup/soup.component';
-import { SweetsComponent } from './pages/sweets/sweets.component';
+import { StarterComponent } from './pages/starter/starter.component';
+import { MainComponent } from './pages/main/main.component';
+import { DessertsComponent } from './pages/desserts/desserts.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { SearchComponent } from './pages/search/search.component';
 import { RecipeComponent } from './pages/recipe/recipe.component';
 
 export const routes: Routes = [
-    { path: '', component: SoupComponent },
+    { path: '', component: MainComponent },
 
-    { path: 'soup', component: SoupComponent },
+    { path: 'main', component: MainComponent },
     
-    { path: 'salad', component: SaladComponent },
+    { path: 'starter', component: StarterComponent },
 
-    { path: 'sweets', component: SweetsComponent },
+    { path: 'desserts', component: DessertsComponent },
 
     { path: 'login', component: LoginComponent },
 

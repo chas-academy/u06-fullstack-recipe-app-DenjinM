@@ -40,3 +40,7 @@ export class RecipeService {
     return this.http.get<any>(url, this.httpOptions);
   }
 }
+
+// if (health) {
+//   url += '&health=' + health; //Kolla upp koden. 
+// }
