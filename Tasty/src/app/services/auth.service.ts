@@ -7,6 +7,8 @@ import { Login } from '../models/Login.model';
   providedIn: 'root',
 })
 export class AuthService {
+  baseURL = "https://u06-fullstack-recipe-app-denjinm.onrender.com/api/" //Deployment baseURL
+  //baseURL = "http://127.0.0.1:8000/api/" //localhost baseURL
   private tokenState: BehaviorSubject<boolean>
   constructor(private http: HttpClient) {
      const initialTokenState = !! localStorage.getItem('token')
@@ -23,10 +25,10 @@ export class AuthService {
   login(loginObj:Login) {
     if (!loginObj) return
     console.log(loginObj);
-    return this.http.post<any>('http://127.0.0.1:8000/api/login', loginObj)
+    return this.http.post<any>(this.baseURL + 'login', loginObj)
   }
   registerUser(userData: any): Observable<any> {
-    const url = 'http://127.0.0.1:8000/api/register';
+    const url = 'register';
     return this.http.post(url, userData);
   }
   postLogout(token: any){
@@ -36,7 +38,7 @@ export class AuthService {
       'Authorization': `Bearer ${token}`
   }
     console.log(headers)
-    return this.http.post<any>('http://127.0.0.1:8000/api/logout' ,{ }, {
+    return this.http.post<any>('logout' ,{ }, {
       headers
   } )
   }
