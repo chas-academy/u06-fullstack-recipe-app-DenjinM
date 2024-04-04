@@ -11,7 +11,7 @@ export class AuthService {
   //baseURL = "http://127.0.0.1:8000/api/" //localhost baseURL
   private tokenState: BehaviorSubject<boolean>
   constructor(private http: HttpClient) {
-     const initialTokenState = !! localStorage.getItem('token')
+     const initialTokenState = !!localStorage.getItem('token')
      this.tokenState = new BehaviorSubject<boolean>(initialTokenState);
     }
     getTokenState(): Observable<boolean> {
@@ -29,7 +29,7 @@ export class AuthService {
   }
   registerUser(userData: any): Observable<any> {
     const url = 'register';
-    return this.http.post(url, userData);
+    return this.http.post(this.baseURL + 'register', userData);
   }
   postLogout(token: any){
     const headers =  {
@@ -38,7 +38,7 @@ export class AuthService {
       'Authorization': `Bearer ${token}`
   }
     console.log(headers)
-    return this.http.post<any>('logout' ,{ }, {
+    return this.http.post<any>(this.baseURL + 'logout' ,{ }, {
       headers
   } )
   }

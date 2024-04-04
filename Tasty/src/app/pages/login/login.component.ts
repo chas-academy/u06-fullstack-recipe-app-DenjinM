@@ -28,7 +28,7 @@ export class LoginComponent {
           this.authService.updateTokenState()
           console.log(localStorage.getItem('token'));
           alert('Login Success');
-          this.router.navigateByUrl('/home')
+          this.router.navigateByUrl('')
         } else {
           alert(res.message);
         }
