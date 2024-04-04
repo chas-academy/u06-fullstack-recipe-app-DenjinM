@@ -18,20 +18,12 @@ export class RecipeService {
   getRecipes(
     searchterm: string,
     dishType: string,
-    soyfree: string = '',
-    fishfree: string = '',
-    redmeatfree: string = ''
+    health: string = '',
   ): Observable<any> {
     let url = this.baseUrl + '?type=public' + '&q=' + searchterm + '&app_id=' + this.app_id + '&app_key=' + this.app_key + '&dishType=' + dishType + '&random=true'
-    if (soyfree) {
-      url += '&health=soy-free';
-    }
-    if (fishfree) {
-      url += '&health=fish-free';
-    }
-    if (redmeatfree) {
-      url += '&health=red-meat-free';
-    }
+    if (health) {
+      url += '&health=' + health;
+      }
     console.log(url);
     return this.http.get<any>(url, this.httpOptions);
   }
@@ -40,7 +32,3 @@ export class RecipeService {
     return this.http.get<any>(url, this.httpOptions);
   }
 }
-
-// if (health) {
-//   url += '&health=' + health; //Kolla upp koden. 
-// }
