@@ -5,11 +5,12 @@ import { SearchComponent } from './pages/search/search.component';
 import { LoginComponent } from './pages/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RegisterComponent } from './pages/register/register.component';
+import { FooterComponent } from './pages/footer/footer.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, RouterLink, SearchComponent, LoginComponent, RouterModule, HttpClientModule, RegisterComponent],
+  imports: [RouterOutlet, NavbarComponent, RouterLink, SearchComponent, LoginComponent, RouterModule, HttpClientModule, RegisterComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
