@@ -6,11 +6,12 @@ import { LoginComponent } from './pages/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RegisterComponent } from './pages/register/register.component';
 import { FooterComponent } from './pages/footer/footer.component';
+import { HomeComponent } from './pages/home/home.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, RouterLink, SearchComponent, LoginComponent, RouterModule, HttpClientModule, RegisterComponent, FooterComponent],
+  imports: [RouterOutlet, NavbarComponent, RouterLink, SearchComponent, LoginComponent, RouterModule, HttpClientModule, RegisterComponent, FooterComponent, HomeComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

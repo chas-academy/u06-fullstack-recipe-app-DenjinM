@@ -6,9 +6,13 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { SearchComponent } from './pages/search/search.component';
 import { RecipeComponent } from './pages/recipe/recipe.component';
+import { HomeComponent } from './pages/home/home.component';
 
 export const routes: Routes = [
-    { path: '', component: MainComponent },
+
+    { path: '', component: HomeComponent},
+
+    { path: 'home', component: HomeComponent},
 
     { path: 'main', component: MainComponent },
     
