@@ -3,6 +3,12 @@
 Detta är min frontend deployment som är kopplat till mitt repo!
 [Frontend Deployment](golden-torrone-1b2280.netlify.app/)  
 
+## Deployment Backend 
+
+Detta är min backend deployment som är kopplat till min frontend deployment och mitt repo!
+[Backend Deployment](https://u06-fullstack-recipe-app-denjinm.onrender.com)
+
+## Kom igång med projektet
 
 Kom igång med att starta projektet som gjorts med hjälp av Angular CLI version 17.2.3!
 
